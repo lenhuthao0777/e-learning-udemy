@@ -12,10 +12,10 @@ function Billboard() {
 					<img src='./img/billboard-mobile.jpg' alt='' />
 				</div>
 				<div className='billboard-content'>
-					<h1>Perfect yourself, today</h1>
+					<h1>24 hour flash sale </h1>
 					<p>
-						It's the last day to learn skills for your future from
-						US $ 11.99
+						Learn with our top rated courses starting at just US $
+						11.99. This promotion ends tonight!
 					</p>
 					<div className='billboard-content__input'>
 						<input

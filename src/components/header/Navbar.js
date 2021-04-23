@@ -8,8 +8,11 @@ import { Button } from "../button/Button";
 import ShopingCart from "./ShopingCart";
 import Category from "./Category";
 import NavBarMobile from "./NavBarMobile";
+import { Close } from "@material-ui/icons";
+
 function Navbar() {
 	const [SideBar, setSideBar] = useState(false);
+	const [SearchBar, setSearchBar] = useState(false);
 	return (
 		<>
 			<div className='header--navbar'>
@@ -112,7 +115,9 @@ function Navbar() {
 					</div>
 				</div>
 				<div className='header--navbar__icon-mobile'>
-					<span className='header--navbar__icon-mobile-search'>
+					<span
+						className='header--navbar__icon-mobile-search'
+						onClick={() => setSearchBar(true)}>
 						<SearchOutlinedIcon className='search-icon__mobile' />
 					</span>
 					<span className='header--navbar__icon-mobile-cart'>
@@ -124,6 +129,27 @@ function Navbar() {
 						</div>
 					</span>
 				</div>
+				<div
+					className={`mobile-input__search ${
+						SearchBar ? "active" : ""
+					}`}>
+					<div className='mobile-search-icon'>
+						<SearchOutlinedIcon className='search-icon' />
+					</div>
+					<form action=''>
+						<input type='text' placeholder='Search' />
+					</form>
+					<div
+						className='mobile-close-icon'
+						onClick={() => setSearchBar(false)}>
+						<Close className='close-icon' />
+					</div>
+				</div>
+				<div
+					className={`mobile-input__search-overlay ${
+						SearchBar ? "active" : ""
+					}`}
+					onClick={() => setSearchBar(false)}></div>
 			</div>
 			<NavBarMobile SideBar={SideBar} setSideBar={setSideBar} />
 		</>

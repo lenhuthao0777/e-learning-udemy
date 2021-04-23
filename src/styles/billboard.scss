@@ -17,10 +17,10 @@
         position: absolute;
         left: 3%;
         width: 440px;
-        height: 270px;
+        height: auto;
         background-color: $color-white-0;
         padding: 24px;
-        z-index: 10000;
+        z-index: 999;
         h1 {
             font-size: 40px;
             font-weight: 700;
@@ -30,6 +30,7 @@
             font-size: 19px;
             color: $color-black-1;
             padding-bottom: 15px;
+            line-height: 20px;
         }
         &__input {
             border: 2px solid $color-black-2;
@@ -57,6 +58,24 @@
         }
     }
 }
+@include responesive("large") {
+    .billboard {
+        &-content {
+            top: 10%;
+            height: auto;
+            width: 320px;
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 16px;
+            }
+            input {
+                font-size: 16px;
+            }
+        }
+    }
+}
 @include responesive("medium") {
     .billboard {
         &-content {
@@ -74,6 +93,16 @@
         }
     }
 }
+@media screen and (max-width: 668px) {
+    .billboard {
+        &-content {
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 @include responesive("small") {
     .billboard {
         &-pc {
@@ -83,7 +112,7 @@
             display: block;
         }
         &-content {
-            display: none;
+            // display: none;
         }
     }
 }
