@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 // import { useState } from 'react';
-const STYLE = ['btn--btn-primary', 'btn--btn-outline', 'btn--outline-no-hover'];
-const SIZE = ['md', 'sm', 'lg', 'full'];
+const STYLE = [
+	"btn--btn-primary",
+	"btn--btn-light",
+	"btn--btn-outline",
+	"btn--outline-no-hover",
+];
+const SIZE = ["md", "sm", "lg", "full"];
 export const Button = ({ children, type, onClick, color, size }) => {
 	// const [ButtonStyle, setButtonStyle] = useState();
 	// const [ButtonSize, SetButtonSize] = useState();

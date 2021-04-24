@@ -45,6 +45,14 @@
         border-color: $color-black-0;
     }
 }
+.btn--btn-light {
+    background-color: $color-trans;
+    color: $color-white-0;
+    border: 1px solid $color-white-0;
+    &:hover {
+        color: $color-white-0;
+    }
+}
 .btn--outline-no-hover {
     font-weight: 550;
     border-radius: 4px;
